@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewReborn - Web | Links</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" href="img/favicon.svg">
+  <script src="https://kit.fontawesome.com/e6a4971ebb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="icon" href="img/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav>
+      <p id="texto-copiar">¡Desarrolla tu aplicación web con NewReborn - Web!
+        Da clic al enlance de abajo 👇 para más detalles:
+        https://links.newrebornweb.info</p>
+        <a id="btn" href="https://newrebornweb.info"><i style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Font Awesome 6 Free';" class="fa-solid fa-house"> Página principal</i></a>
+        <i id="btn" onclick="copyToClickBoard()" class="fa-solid fa-share"></i>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="info-nrw">
+        <div on class="foto-nrw">
+          <a target="_blank" href="https://www.buymeacoffee.com/newrebornweb"><img id="foto_mia" src="https://i.imgur.com/mP0001M.png" alt="Luis Montaño, creador de NewReborn - Web" /></a>
+        </div>
+        <div class="textos-nrw">
+          <h1>@newrebornweb</h1>
+          <p>Imagina, analiza y desarrolla</p>
+        </div>
+      </div>
+    </section>
+    <section class="botones">
+      <a href="pdf-2.pdf" download="NewReborn - Web CV" target="_blank"><i
+          class="fa-solid fa-arrow-down"></i>&nbsp;Descargar CV</a>
+      <a href="https://www.domestika.org/es/newrebornweb" target="_blank"><i
+          class="fa-solid fa-file-lines"></i>&nbsp;Perfil domestika</a>
+      <a href="https://github.com/NewRebornWeb" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;Proyectos
+        realizados</a>
+      <a href="https://www.figma.com/@newrebornweb" target="_blank"><i class="fa-brands fa-figma"></i>&nbsp;Diseños en
+        figma</a>
+      <a href="https://es.fiverr.com/newreborn" target="_blank"><i
+          class="fa-sharp fa-solid fa-briefcase"></i>&nbsp;Contrata mis servicios</a>
+    </section>
+    <section class="redes-sociales">
+      <a class="f" target="_blank" href="https://www.facebook.com/newrebornweb"><i
+          class="fa-brands fa-facebook"></i></a>
+      <a class="i" target="_blank" href="https://www.instagram.com/newrebornweb/"><i
+          class="fa-brands fa-instagram"></i></a>
+      <a class="t" target="_blank" href="https://twitter.com/newrebornweb"><i class="fa-brands fa-twitter"></i></a>
+      <a class="l" target="_blank" href="https://www.linkedin.com/in/newrebornweb/"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a class="y" target="_blank" href="https://www.youtube.com/channel/UCj6muHqcQNO9R_LRvxSBJCg"><i
+          class="fa-brands fa-youtube"></i></a>
+    </section>
+    <footer>
+      <img src="https://i.imgur.com/X5415Do.png" alt="Logo de NewReborn - Web">
+      <p>Desarrollado por NewReborn - Web</p>
+    </footer>
+  </main>
+
+  <script>
+    function copyToClickBoard() {
+      var content = document.getElementById("texto-copiar").innerHTML;
+
+      navigator.clipboard
+        .writeText(content)
+        .then(() => {
+          Toastify({
+            text: "¡Copiado al portapapeles!",
+            duration: 3000,
+            position: "center",
+            style: {
+              background: "#eeeeee",
+              color: "black",
+              fontSize: "12px",
+            },
+          }).showToast();
+          console.log("Text copied to clipboard...");
+        })
+        .catch((err) => {
+          console.log("Something went wrong", err);
+        });
+    }
+
+    const mouseHoverFoto = document.getElementById("foto_mia");
+
+    foto_mia.addEventListener("mouseenter", (event) => {
+      
+      event.target.src = "img/icons8-cafe-100.png";
+      
+    });
+
+    foto_mia.addEventListener("mouseleave", (event) => {
+      
+      event.target.src = "https://i.imgur.com/mP0001M.png";
+      
+    });
+
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
